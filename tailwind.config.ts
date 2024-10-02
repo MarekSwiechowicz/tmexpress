@@ -4,8 +4,7 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}", // If you have a pages directory
-    // Explicitly avoid scanning node_modules
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "!./node_modules/**/*",
   ],
 
@@ -21,7 +20,7 @@ const config: Config = {
       },
 
       fontFamily: {
-        montserrat: ["var(--font-montserrat)"],
+        sans: ["Poppins", "sans-serif"],
       },
       screens: {
         xs: "480px", // Min width 480px

@@ -1,14 +1,12 @@
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/NavBar";
+import Onas from "@/components/Onas";
+import Partners from "@/components/Partners";
+import Testimonial from "@/components/Testimonial";
+import Truck from "@/components/truck";
+import Uslugi from "@/components/Uslugi";
 import Image from "next/image";
-
-export const metadata = {
-  title: "TMExpress",
-  description: "TMExpress",
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
 
 export const viewport = "width=device-width, initial-scale=1";
 
@@ -17,7 +15,12 @@ export default function Home() {
     <>
       <main className="bg-white">
         <Navbar></Navbar>
-        <div>123</div>
+        <Onas></Onas>
+        <Truck></Truck>
+        <Uslugi></Uslugi>
+        <Testimonial></Testimonial>
+        <Partners></Partners>
+        <Contact></Contact>
         <Footer></Footer>
       </main>
     </>

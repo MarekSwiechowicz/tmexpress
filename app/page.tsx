@@ -1,20 +1,24 @@
-import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/NavBar";
-import Head from "next/head";
 import Image from "next/image";
+
+export const metadata = {
+  title: "TMExpress",
+  description: "TMExpress",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>TMExpress</title>
-        <meta name="description" content="TMExpress" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* <Header></Header> */}
       <main className="bg-white">
         <Navbar></Navbar>
+        <div>123</div>
+        <Footer></Footer>
       </main>
     </>
   );

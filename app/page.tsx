@@ -6,7 +6,6 @@ import Partners from "@/components/Partners";
 import Testimonial from "@/components/Testimonial";
 import Truck from "@/components/truck";
 import Uslugi from "@/components/Uslugi";
-import Image from "next/image";
 
 export const viewport = "width=device-width, initial-scale=1";
 

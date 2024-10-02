@@ -1,37 +1,36 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../../public/images/Logo.png";
 import Image from "next/image";
 
-interface CustomLinkProps {
-  href: string;
-  title: string;
-  className?: string;
-}
+// interface CustomLinkProps {
+//   href: string;
+//   title: string;
+//   className?: string;
+// }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
-  return (
-    <Link href={href} className={`${className} relative group`}>
-      {title}
+// const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
+//   return (
+//     <Link href={href} className={`${className} relative group`}>
+//       {title}
 
-      <span
-        className="h-[1px] inline-block w-0 
-      absolute bg-black left-0 -bottom-0.5 
-       group-hover:w-full transition-[width] ease duration-300 "
-      ></span>
-    </Link>
-  );
-};
+//       <span
+//         className="h-[1px] inline-block w-0
+//       absolute bg-black left-0 -bottom-0.5
+//        group-hover:w-full transition-[width] ease duration-300 "
+//       ></span>
+//     </Link>
+//   );
+// };
 
 export default function Navbar() {
-  const links = [
-    { href: "#section1", title: "O nas" },
-    { href: "#section2", title: "Usługi" },
-    { href: "#section3", title: "Partnerzy" },
-    { href: "#section4", title: "Kontakt" },
-    { href: "#section5", title: "+48 530 995 026" },
-  ];
+  // const links = [
+  //   { href: "#section1", title: "O nas" },
+  //   { href: "#section2", title: "Usługi" },
+  //   { href: "#section3", title: "Partnerzy" },
+  //   { href: "#section4", title: "Kontakt" },
+  //   { href: "#section5", title: "+48 530 995 026" },
+  // ];
 
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {

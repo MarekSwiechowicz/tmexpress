@@ -39,14 +39,14 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full px-4 lg:px-[146px] font-medium flex items-center justify-between">
+      <header className="w-full px-4 font-medium flex items-center justify-between">
         <div className="py-4 w-24">
           <Image src={Logo} alt="logo" />
         </div>
         <span className="text-lg font-normal">+48 530 995 026</span>
         <button
           id="buttonId"
-          className="flex lg:hidden flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center"
           onClick={handleClick}
         >
           <span

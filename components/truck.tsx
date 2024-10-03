@@ -4,22 +4,28 @@ import Truck from "../public/images/Car.png";
 
 export default function truck() {
   return (
-    <div>
-      <Image src={Truck} alt="truck"></Image>
-      <div className="bg-black text-white p-6">
-        <h2 className="text-xl font-bold mb-4">
+    <div className="flex flex-col lg:flex-row-reverse">
+      <div className="w-full lg:w-1/2">
+        <Image
+          src={Truck}
+          alt="Company truck delivering goods"
+          className="w-full h-auto"
+        />
+      </div>
+      <div className="bg-black text-white  w-full lg:w-1/2 flex flex-col justify-center py-14 pl-4 pr-7 lg:pl-48 lg:pr-24">
+        <h2 className="text-3xl font-bold mb-4">
           Nadrzędnym celem działalności firmy jest
         </h2>
-        <p className="text-base mb-4">
+        <p className="text-lg mb-4">
           zapewnienie naszym klientom najwyższej jakości usług w zakresie
           transportu krajowego i zagranicznego.
         </p>
-        <p className="text-base mb-4">
+        <p className="text-lg mb-4">
           Obsługujemy od lat klientów indywidualnych, jak i małe i duże
           przedsiębiorstwa. Dostosowujemy się do potrzeb naszych klientów,
           jesteśmy elastyczni, nie boimy się wyzwań.
         </p>
-        <p className="text-base">
+        <p className="text-lg">
           Wyróżnia nas rzetelność, terminowość i profesjonalizm świadczonych
           usług.
         </p>

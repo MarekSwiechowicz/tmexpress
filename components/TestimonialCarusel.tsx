@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Testimonial() {
+export default function TestimonialCarusel() {
   return (
     <div className="border-t border-gray-300 pt-6 mt-6 px-6">
       <blockquote className="text-gray-600 italic">

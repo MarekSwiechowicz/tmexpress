@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Logo from "../../public/images/Logo.png";
 import Image from "next/image";
+import HamburgerButton from "../HamburgerButton";
 
 // interface CustomLinkProps {
 //   href: string;
@@ -24,13 +25,12 @@ import Image from "next/image";
 // };
 
 export default function Navbar() {
-  // const links = [
-  //   { href: "#section1", title: "O nas" },
-  //   { href: "#section2", title: "Usługi" },
-  //   { href: "#section3", title: "Partnerzy" },
-  //   { href: "#section4", title: "Kontakt" },
-  //   { href: "#section5", title: "+48 530 995 026" },
-  // ];
+  const links = [
+    { href: "#section1", title: "O nas" },
+    { href: "#section2", title: "Usługi" },
+    { href: "#section3", title: "Partnerzy" },
+    { href: "#section4", title: "Kontakt" },
+  ];
 
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
@@ -39,62 +39,31 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full px-4 font-medium flex items-center justify-between">
+      <header className="w-full font-medium flex items-center justify-between pt-14 pb-5">
         <div className="py-4 w-24">
           <Image src={Logo} alt="logo" />
         </div>
         <span className="text-lg font-normal">+48 530 995 026</span>
-        <button
-          id="buttonId"
-          className="flex flex-col justify-center items-center"
-          onClick={handleClick}
-        >
-          <span
-            className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-10 rounded-sm ${
-              isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-            }`}
-          ></span>
-          <span
-            className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-10
-            rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}
-          ></span>
-          <span
-            className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-10 rounded-sm ${
-              isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-            }`}
-          ></span>
-        </button>
+        <HamburgerButton isOpen={isOpen} handleClick={handleClick} />
       </header>
 
       {/* Conditionally rendering the mobile menu */}
       <section
         id="mobile-menu"
-        className={`absolute top-12 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 ${
+        className={`absolute top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
           isOpen ? "block" : "hidden"
         }`}
       >
-        <nav className="flex flex-col min-h-screen items-center py-8">
-          <a href="#about" className="w-full text-center py-6 hover:opacity-90">
-            O nas
-          </a>
-          <a
-            href="#Usługi"
-            className="w-full text-center py-6 hover:opacity-90"
-          >
-            Usługi
-          </a>
-          <a
-            href="#Partners"
-            className="w-full text-center py-6 hover:opacity-90"
-          >
-            Partnerzy
-          </a>
-          <a
-            href="#contackt"
-            className="w-full text-center py-6 hover:opacity-90"
-          >
-            Kontakt
-          </a>
+        <nav className="flex flex-col  items-center py-8">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="w-full text-center py-6 hover:opacity-90"
+            >
+              {link.title}
+            </a>
+          ))}
         </nav>
       </section>
     </>

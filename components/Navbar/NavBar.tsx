@@ -3,26 +3,27 @@ import React, { useState } from "react";
 import Logo from "../../public/images/Logo.png";
 import Image from "next/image";
 import HamburgerButton from "../HamburgerButton";
+import Link from "next/link";
 
-// interface CustomLinkProps {
-//   href: string;
-//   title: string;
-//   className?: string;
-// }
+interface CustomLinkProps {
+  href: string;
+  title: string;
+  className?: string;
+}
 
-// const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
-//   return (
-//     <Link href={href} className={`${className} relative group`}>
-//       {title}
+const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
+  return (
+    <Link href={href} className={`${className} relative group hidden lg:flex`}>
+      {title}
 
-//       <span
-//         className="h-[1px] inline-block w-0
-//       absolute bg-black left-0 -bottom-0.5
-//        group-hover:w-full transition-[width] ease duration-300 "
-//       ></span>
-//     </Link>
-//   );
-// };
+      <span
+        className="h-[1px] inline-block w-0
+      absolute bg-black left-0 -bottom-0.5
+       group-hover:w-full transition-[width] ease duration-300 "
+      ></span>
+    </Link>
+  );
+};
 
 export default function Navbar() {
   const links = [
@@ -39,18 +40,28 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full font-medium flex items-center justify-between pt-14 pb-5">
-        <div className="py-4 w-24">
-          <Image src={Logo} alt="logo" />
+      <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5">
+        <div className="flex-[0.4]">
+          <div className="py-4 w-24">
+            <Image src={Logo} alt="logo" />
+          </div>
         </div>
-        <span className="text-lg font-normal">+48 530 995 026</span>
-        <HamburgerButton isOpen={isOpen} handleClick={handleClick} />
+
+        <div className="flex-[0.6] flex items-center justify-end lg:justify-between">
+          {links.map((link, index) => (
+            <CustomLink key={index} href={link.href} title={link.title} />
+          ))}
+          <span className="text-lg font-normal pr-7 lg:pr-0">
+            +48 530 995 026
+          </span>
+          <HamburgerButton isOpen={isOpen} handleClick={handleClick} />
+        </div>
       </header>
 
       {/* Conditionally rendering the mobile menu */}
       <section
         id="mobile-menu"
-        className={`absolute top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
+        className={`absolute top-24 lg-top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
           isOpen ? "block" : "hidden"
         }`}
       >

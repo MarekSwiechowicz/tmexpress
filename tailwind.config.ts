@@ -18,7 +18,9 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
       },
-
+      height: {
+        "0.25": "1px", // Add a custom height value for 1px
+      },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
@@ -46,6 +48,7 @@ const config: Config = {
         light: "#f5f5f5",
         primary: "#B63E96", // 240,86,199
         primaryDark: "#58E6D9", // 80,230,217
+        customGray: "#EFEFEF",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",

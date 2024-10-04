@@ -13,9 +13,9 @@ export default function truck() {
         />
       </div>
       <div className="bg-black text-white  w-full lg:w-1/2 flex flex-col justify-center py-14 pl-4 pr-7 lg:pl-48 lg:pr-24">
-        <h2 className="text-3xl font-bold mb-4">
+        <h1 className="text-3xl font-bold mb-4">
           Nadrzędnym celem działalności firmy jest
-        </h2>
+        </h1>
         <p className="text-lg mb-4">
           zapewnienie naszym klientom najwyższej jakości usług w zakresie
           transportu krajowego i zagranicznego.

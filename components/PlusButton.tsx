@@ -12,7 +12,6 @@ const PlusButton: React.FC<PlusButtonProps> = ({ isOpen, handleClick }) => {
       className="flex flex-col justify-center items-center pt-64 lg:pt-36 pl-11"
       onClick={handleClick}
     >
-      {/* Vertical line */}
       <span
         className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.25 w-10 rounded-sm absolute ${
           isOpen ? "opacity-0" : "rotate-90"

@@ -1,84 +1,73 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Logo from "../public/images/LogoWhite.png";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 px-5">
-      <div className="max-w-screen-lg mx-auto">
-        <div className="py-4 w-24">
-          <Image src={Logo} alt="logo" />
-        </div>
-        {/* Email subscription section */}
-        <div className="mb-10">
-          <p className="text-sm mb-4">
-            Aby otrzymać ofertę w formacie pdf podaj adres e-mail
-          </p>
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Wpisz e-mail"
-              className="p-2 w-full max-w-xs bg-gray-800 text-white rounded-l-lg focus:outline-none"
-            />
-            <button className="bg-white text-black px-4 py-2 rounded-r-lg">
-              →
-            </button>
+    <footer className="bg-black text-white lg:pt-20 pt-14">
+      <div className="px-4 lg:px-36 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Left Section */}
+          <div>
+            <div className="py-4 w-24">
+              <Image src={Logo} alt="logo" />
+            </div>
+            <p>Aby otrzymać ofertę w formacie pdf podaj adres e-mail</p>
+            <form className="mt-4 flex">
+              <input
+                type="email"
+                className="bg-white text-black px-4 py-2 rounded-l outline-none"
+                placeholder="Wpisz e-mail..."
+              />
+              <button
+                type="submit"
+                className="bg-white text-black px-4 py-2 rounded-r"
+              >
+                →
+              </button>
+            </form>
           </div>
-        </div>
 
-        {/* Links section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="hover:underline">
-                O nas
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Oferta
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Partnerzy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Kontakt
-              </a>
-            </li>
-          </ul>
+          {/* Center Section */}
+          <div>
+            <ul className="space-y-2">
+              <li>
+                <a href="#about">O nas</a>
+              </li>
+              <li>
+                <a href="#offer">Oferta</a>
+              </li>
+              <li>
+                <a href="#partners">Partnerzy</a>
+              </li>
+              <li>
+                <a href="#contact">Kontakt</a>
+              </li>
+            </ul>
+          </div>
 
-          {/* Contact information */}
-          <div className="space-y-2 text-gray-400">
-            <p>TM Express</p>
+          {/* Right Section */}
+          <div>
+            <h3 className="font-bold">TM Express</h3>
             <p>NIP 6423205008</p>
             <p>ul. Chalotta 6 lok. 3</p>
             <p>44-200 Rybnik</p>
-          </div>
-
-          {/* Contact numbers */}
-          <div className="space-y-2 text-gray-400">
-            <p>tel. 530 995 026 Tomasz Bąk</p>
-            <p>tel. 693 409 630 Mikołaj Owczarek</p>
-            <p>
-              <a
-                href="mailto:tmtransport@gmail.com"
-                className="hover:underline"
-              >
-                tmtransport@gmail.com
-              </a>
+            <p className="mt-4">
+              tel. 530 995 026 Tomasz Bąk
+              <br />
+              tel. 693 409 630 Mikołaj Owczarek
             </p>
+            <p className="mt-4">tmtransport@gmail.com</p>
           </div>
         </div>
 
-        {/* Footer bottom */}
-        <div className="border-t border-white mt-10 pt-4 text-sm text-center">
+        {/* Bottom Section */}
+        <div className="mt-8 border-t border-white pt-4 text-sm">
           <p>copyrights 2024 © tmexpress</p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

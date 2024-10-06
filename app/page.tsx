@@ -1,8 +1,9 @@
 import Achievements from "@/components/Achievements";
-import Contact from "@/components/Contact";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/NavBar";
 import Onas from "@/components/Onas";
+import ParkingImage from "@/components/ParkingImage";
 import Partners from "@/components/Partners";
 import TestimonialCarusel from "@/components/TestimonialCarusel";
 import Truck from "@/components/truck";
@@ -23,8 +24,11 @@ export default function Home() {
         <Truck></Truck>
         <Uslugi></Uslugi>
         <TestimonialCarusel></TestimonialCarusel>
-        <Partners></Partners>
-        <Contact></Contact>
+        <ParkingImage></ParkingImage>
+        <WrapperComponent>
+          <Partners></Partners>
+          <ContactForm></ContactForm>
+        </WrapperComponent>
         <Footer></Footer>
       </main>
     </>

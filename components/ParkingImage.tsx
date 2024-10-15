@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ParkingMobile from "../public/images/parkingMobile.png";
-import ParkingDesktop from "../public/images/parkingDesktop.png";
+import ParkingDesktop from "../public/images/ParkingDesktop.png";
 
 export default function ParkingImage() {
   return (

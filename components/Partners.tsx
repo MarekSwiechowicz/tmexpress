@@ -12,8 +12,8 @@ export default function Partners() {
       <div className="bg-white py-14 flex flex-col lg:flex-row lg:justify-between  items-center space-y-6">
         <Image src={Trendy} alt="parking"></Image>
         <Image src={Fresh} alt="parking"></Image>
-        <Image src={Kacper} alt="parking"></Image>
         <Image src={Styroporstuck} alt="parking"></Image>
+        <Image src={Kacper} alt="parking"></Image>
         <Image src={dwadwa} alt="parking"></Image>
       </div>
     </div>

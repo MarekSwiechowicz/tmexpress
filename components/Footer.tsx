@@ -4,11 +4,11 @@ import Logo from "../public/images/LogoWhite.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white lg:pt-20 pt-14">
+    <footer className="bg-black text-white lg:pt-20 pt-14 pb-14">
       <div className="px-4 lg:px-36 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Left Section */}
-          <div>
+          <div className="md:col-span-1">
             <div className="py-4 w-24">
               <Image src={Logo} alt="logo" />
             </div>
@@ -27,6 +27,7 @@ const Footer = () => {
               </button>
             </form>
           </div>
+          <div className="col-span-1"></div>
 
           {/* Center Section */}
           <div>
@@ -47,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div>
+          <div className="text-gray-400">
             <h3 className="font-bold">TM Express</h3>
             <p>NIP 6423205008</p>
             <p>ul. Chalotta 6 lok. 3</p>

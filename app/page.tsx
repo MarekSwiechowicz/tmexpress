@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/NavBar";
 import Onas from "@/components/Onas";
 import ParkingImage from "@/components/ParkingImage";
 import Partners from "@/components/Partners";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import TestimonialCarusel from "@/components/TestimonialCarusel";
 import Truck from "@/components/truck";
 import Uslugi from "@/components/Uslugi";
@@ -30,6 +31,7 @@ export default function Home() {
           <ContactForm></ContactForm>
         </WrapperComponent>
         <Footer></Footer>
+        <ScrollToTopButton></ScrollToTopButton>
       </main>
     </>
   );

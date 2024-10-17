@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Truck from "../public/images/Car.png";
+import TruckSmall from "../public/images/CarSmall.png";
 
 export default function truck() {
   return (
@@ -9,7 +10,14 @@ export default function truck() {
         <Image
           src={Truck}
           alt="Company truck delivering goods"
-          className="w-full h-auto"
+          className="w-full h-auto lg:hidden xl:block"
+        />
+
+        {/* Image for screens between lg and xl */}
+        <Image
+          src={TruckSmall}
+          alt="Different company truck delivering goods"
+          className="w-full h-auto hidden lg:block xl:hidden"
         />
       </div>
       <div className="bg-black text-white  w-full lg:w-1/2 flex flex-col justify-center py-14 pl-4 pr-7 lg:pl-48 lg:pr-24">

@@ -50,22 +50,22 @@ export default function Uslugi() {
   }, [openSections]);
 
   return (
-    <div className="w-full lg:flex bg-customGray pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36">
-      <div className="lg:flex-[0.2] text-5xl pb-8 font-bold">Usługi</div>
-      <div className="lg:flex-[0.8]">
+    <div className="flex flex-col xl:flex-row bg-customGray pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36">
+      <div className="lg:flex-[0.25] text-5xl pb-8 font-bold">Usługi</div>
+      <div className="lg:flex-[0.75]">
         <div className="h-0.25 bg-black w-full"></div>
 
         {/* Section 1 */}
-        <div className="flex pb-8">
-          <div className="flex flex-col lg:flex-row">
-            <div className="pt-9 lg:pt-24 pb-9 lg:pb-24">
+        <div className="flex">
+          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+            <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-40">
               <Image src={Box} alt="Box" />
             </div>
             <div className="lg:pt-16 lg:pl-12 lg:pr-12 pb-8 text-4xl">
               Transport materiałów przemysłowych bez kontroli temperatury
             </div>
           </div>
-          <div className="">
+          <div className="lg:flex-[1]">
             <PlusButton
               isOpen={openSections.section1}
               handleClick={() => handleClick("section1")}
@@ -74,9 +74,9 @@ export default function Uslugi() {
         </div>
         <div
           ref={refs.section1}
-          className="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0"
+          className="duration-500 overflow-hidden max-h-0"
         >
-          <div className="pb-16 lg:pb-8">
+          <div className="pb-16 lg:pl-36 lg:pr-48 lg:text-xl">
             Oferujemy profesjonalny transport materiałów przemysłowych, które
             nie wymagają specjalistycznej kontroli temperatury. Nasze usługi
             obejmują przewóz surowców, komponentów oraz gotowych produktów,
@@ -89,28 +89,28 @@ export default function Uslugi() {
         <div className="h-0.25 bg-black w-full"></div>
 
         {/* Section 2 */}
-        <div className="flex pb-8">
-          <div className="flex flex-col lg:flex-row">
-            <Image
-              src={temperature}
-              alt="Temperature Control"
-              className="pt-9 lg:pt-44 pb-9 lg:pb-24"
-            />
-            <div className="lg:pt-16 pb-8 text-3xl">
+        <div className="flex">
+          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+            <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-40">
+              <Image src={temperature} alt="Box" />
+            </div>
+            <div className="lg:pt-16 lg:pl-12 lg:pr-12 pb-8 text-4xl">
               Transport artykułów spożywczych w warunkach kontrolowanej
               temperatury
             </div>
           </div>
-          <PlusButton
-            isOpen={openSections.section2}
-            handleClick={() => handleClick("section2")}
-          />
+          <div className="lg:flex-[1]">
+            <PlusButton
+              isOpen={openSections.section2}
+              handleClick={() => handleClick("section2")}
+            />
+          </div>
         </div>
         <div
           ref={refs.section2}
-          className="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0"
+          className="duration-500 overflow-hidden max-h-0"
         >
-          <div className="pb-16 lg:pb-8">
+          <div className="pb-16 lg:pl-36 lg:pr-48 lg:text-xl">
             Specjalizujemy się w transporcie artykułów spożywczych wymagających
             utrzymania stałej, kontrolowanej temperatury. Nasze chłodnie i
             izotermy są wyposażone w nowoczesne systemy monitorowania
@@ -123,27 +123,27 @@ export default function Uslugi() {
         <div className="h-0.25 bg-black w-full"></div>
 
         {/* Section 3 */}
-        <div className="flex pb-8">
-          <div className="flex flex-col lg:flex-row">
-            <Image
-              src={Shield}
-              alt="Sensitive Goods"
-              className="pt-9 lg:pt-44 pb-9 lg:pb-24"
-            />
-            <div className="lg:pt-16 pb-8 text-3xl">
+        <div className="flex">
+          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+            <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-20">
+              <Image src={Shield} alt="Box" />
+            </div>
+            <div className="lg:pt-16 lg:pl-12 lg:pr-12 pb-8 text-4xl">
               Transport towarów wrażliwych
             </div>
           </div>
-          <PlusButton
-            isOpen={openSections.section3}
-            handleClick={() => handleClick("section3")}
-          />
+          <div className="lg:flex-[1]">
+            <PlusButton
+              isOpen={openSections.section3}
+              handleClick={() => handleClick("section3")}
+            />
+          </div>
         </div>
         <div
           ref={refs.section3}
-          className="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0"
+          className="duration-500 overflow-hidden max-h-0"
         >
-          <div className="pb-16 lg:pb-8">
+          <div className="pb-16 lg:pl-36 lg:pr-48 lg:text-xl">
             Przewóz towarów wrażliwych, takich jak elektronika, farmaceutyki czy
             sprzęt medyczny, wymaga szczególnej ostrożności i precyzji. Nasza
             firma posiada doświadczenie oraz odpowiednie zasoby, aby zapewnić

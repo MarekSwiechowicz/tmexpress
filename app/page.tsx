@@ -24,7 +24,10 @@ export default function Home() {
         </WrapperComponent>
         <Truck></Truck>
         <Uslugi></Uslugi>
-        <TestimonialCarusel></TestimonialCarusel>
+        <WrapperComponent>
+          <TestimonialCarusel></TestimonialCarusel>
+        </WrapperComponent>
+
         <ParkingImage></ParkingImage>
         <WrapperComponent>
           <Partners></Partners>

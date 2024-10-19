@@ -1,81 +1,70 @@
 "use client";
-import { useState } from "react";
-
-const testimonials = [
-  {
-    quote:
-      "Bardzo jestem zadowolony z usług firmy transportowej TM Express. Zawsze dostarczają moje przesyłki na czas, a personel jest bardzo uprzejmy i pomocny. Ich flota pojazdów jest nowoczesna i utrzymana w doskonałym stanie, co gwarantuje bezpieczeństwo moich towarów podczas transportu.",
-    name: "Maciej Powrot",
-    position: "CEO Biedronka",
-  },
-  {
-    quote:
-      "Firma TM Express zawsze wykonuje zlecenia na czas. Ich usługi transportowe są niezawodne i polecam je każdemu.",
-    name: "Anna Kowalska",
-    position: "Manager, ABC Company",
-  },
-  {
-    quote:
-      "Niezawodna obsługa i wyjątkowo uprzejma obsługa klienta. Z TM Express współpracuję od lat i jestem bardzo zadowolony.",
-    name: "Jan Nowak",
-    position: "Logistics Head, XYZ Corp",
-  },
-];
+import React, { useState, useEffect } from "react";
 
 export default function TestimonialCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // Array of testimonials
+  const testimonials = [
+    {
+      text: "Bardzo jestem zadowolony z usług firmy transportowej TM Express. Zawsze dostarczają moje przesyłki na czas, a personel jest bardzo uprzejmy i pomocny. Ich flota pojazdów jest nowoczesna i utrzymana w doskonałym stanie, co gwarantuje bezpieczeństwo moich towarów podczas transportu.",
+      author: "- Maciej Powrot, CEO Biedronka",
+    },
+    {
+      text: "Dzięki TM Express moje przesyłki zawsze docierają na czas. Flota ich pojazdów to najlepsze, co spotkało moją firmę w zakresie transportu.",
+      author: "- Anna Kowalska, Logistics Manager",
+    },
+    {
+      text: "Firma TM Express to gwarancja jakości. Od lat korzystam z ich usług i nigdy się nie zawiodłem. Bardzo polecam.",
+      author: "- Jan Nowak, Owner of Nowak Co.",
+    },
+  ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  };
+  // State for the currently active testimonial
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [fade, setFade] = useState(true); // Control fade effect
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+  // Function to switch testimonials when a button is clicked
+  const handleButtonClick = (index) => {
+    setFade(false); // Start fading out
+    setTimeout(() => {
+      setActiveIndex(index); // Update testimonial
+      setFade(true); // Fade in
+    }, 300); // Sync with the fade-out duration
   };
 
   return (
-    <div className="max-w-lg mx-auto py-8">
-      <div className="relative">
-        <div className="p-6 bg-white rounded-lg shadow-lg">
-          <blockquote className="text-lg italic text-gray-700">
-            &quot;{testimonials[currentSlide].quote}&quot;
-          </blockquote>
-          <div className="mt-4 text-right">
-            <p className="font-semibold">{testimonials[currentSlide].name}</p>
-            <p className="text-sm text-gray-500">
-              {testimonials[currentSlide].position}
-            </p>
-          </div>
+    <div className="flex justify-center items-center pt-16 pb-16">
+      <div className="relative max-w-xl text-center">
+        {/* Quote Mark */}
+        <div className="absolute text-5xl font-bold text-black top-[-20px] left-[-15px]">
+          “
+        </div>
+        {/* Testimonial Text with Fade Animation */}
+        <div
+          className={`transition-opacity duration-500 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="text-lg leading-relaxed text-gray-800">
+            {testimonials[activeIndex].text}
+          </p>
+          {/* Author */}
+          <p className="text-right mt-4 text-gray-600">
+            {testimonials[activeIndex].author}
+          </p>
         </div>
 
-        <button
-          className="absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-700 text-white p-2 rounded-full"
-          onClick={prevSlide}
-        >
-          &#10094;
-        </button>
-        <button
-          className="absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-700 text-white p-2 rounded-full"
-          onClick={nextSlide}
-        >
-          &#10095;
-        </button>
-      </div>
-
-      <div className="mt-4 flex justify-center space-x-2">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentSlide ? "bg-gray-700" : "bg-gray-300"
-            }`}
-          />
-        ))}
+        {/* Dots/Buttons for switching testimonials */}
+        <div className="flex space-x-4 mt-6 justify-center">
+          {testimonials.map((_, index) => (
+            <div
+              key={index}
+              className={`w-4 h-4 rounded-full cursor-pointer ${
+                index === activeIndex ? "bg-black" : "bg-gray-300"
+              }`}
+              onClick={() => handleButtonClick(index)} // Switch to corresponding testimonial on click
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );

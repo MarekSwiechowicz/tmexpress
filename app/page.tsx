@@ -6,7 +6,7 @@ import Onas from "@/components/Onas";
 import ParkingImage from "@/components/ParkingImage";
 import Partners from "@/components/Partners";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import TestimonialCarusel from "@/components/TestimonialCarusel";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Truck from "@/components/truck";
 import Uslugi from "@/components/Uslugi";
 import WrapperComponent from "@/components/WrapperComponent";
@@ -25,7 +25,7 @@ export default function Home() {
         <Truck></Truck>
         <Uslugi></Uslugi>
         <WrapperComponent>
-          <TestimonialCarusel></TestimonialCarusel>
+          <TestimonialCarousel></TestimonialCarousel>
         </WrapperComponent>
 
         <ParkingImage></ParkingImage>

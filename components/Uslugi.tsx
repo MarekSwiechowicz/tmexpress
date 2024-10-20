@@ -50,7 +50,10 @@ export default function Uslugi() {
   }, [openSections]);
 
   return (
-    <div className="flex flex-col xl:flex-row bg-customGray pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36">
+    <div
+      id="section2"
+      className="flex flex-col xl:flex-row bg-customGray pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36 "
+    >
       <div className="lg:flex-[0.25] text-5xl pb-8 font-bold">Usługi</div>
       <div className="lg:flex-[0.75]">
         <div className="h-0.25 bg-black w-full"></div>

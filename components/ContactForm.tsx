@@ -10,6 +10,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,18 +23,17 @@ const ContactForm = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    // Replace with your actual EmailJS service ID, template ID, and user ID
     emailjs
       .send(
-        "service_cxow07d",
-        "template_eydy4r8",
+        "service_cxow07d", // Your EmailJS service ID
+        "template_eydy4r8", // Your EmailJS template ID
         formData,
-        "pCsE7952Dep3pNzqh"
+        "pCsE7952Dep3pNzqh" // Your EmailJS user ID
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Email sent successfully!");
+          setShowModal(true); // Show the modal on success
         },
         (error) => {
           console.log(error.text);
@@ -41,8 +42,15 @@ const ContactForm = () => {
       );
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="flex justify-center items-center pb-44">
+    <div
+      id="section4"
+      className="flex justify-center items-center  pb-24 lg:pb-44"
+    >
       <div className="w-full lg:p-12 px-4 py-16 lg:grid lg:grid-cols-2 lg:gap-8 bg-gray-200">
         <div className="flex flex-col">
           <h2 className="text-5xl font-bold mb-4">Skontaktuj się z nami</h2>
@@ -105,7 +113,7 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Nazwa firmy"
               className="w-full p-2 border border-black bg-gray-200"
-              required
+              required={formData.companyType === "Firma"} // Make the field required only if "Firma" is selected
             />
           </div>
 
@@ -158,6 +166,24 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg text-center">
+            <h2 className="text-2xl font-bold mb-4">
+              Twoja wiadomość została wysłana
+            </h2>
+            <p>Nasz konsultant odpowie, jak najszybciej to możliwe.</p>
+            <button
+              className="mt-6 px-4 py-2 bg-black text-white rounded"
+              onClick={closeModal}
+            >
+              Wróć
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

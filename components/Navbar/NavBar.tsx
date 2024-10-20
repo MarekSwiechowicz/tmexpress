@@ -65,12 +65,13 @@ export default function Navbar() {
           isOpen ? "block" : "hidden"
         }`}
       >
-        <nav className="flex flex-col  items-center py-8">
+        <nav className="flex flex-col items-center py-8">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="w-full text-center py-6 hover:opacity-90"
+              onClick={() => setIsOpen(false)} // Close the menu after clicking the link
             >
               {link.title}
             </a>

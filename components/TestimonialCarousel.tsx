@@ -1,14 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-// Define the type for a testimonial
 interface Testimonial {
   text: string;
   author: string;
 }
 
 export default function TestimonialCarousel() {
-  // Array of testimonials with explicit typing
   const testimonials: Testimonial[] = [
     {
       text: "Bardzo jestem zadowolony z usług firmy transportowej TM Express. Zawsze dostarczają moje przesyłki na czas, a personel jest bardzo uprzejmy i pomocny. Ich flota pojazdów jest nowoczesna i utrzymana w doskonałym stanie, co gwarantuje bezpieczeństwo moich towarów podczas transportu.",
@@ -26,15 +24,15 @@ export default function TestimonialCarousel() {
 
   // State for the currently active testimonial and fade state with types
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [fade, setFade] = useState<boolean>(true); // Control fade effect
+  const [fade, setFade] = useState<boolean>(true);
 
   // Function to switch testimonials when a button is clicked with explicit typing
   const handleButtonClick = (index: number): void => {
-    setFade(false); // Start fading out
+    setFade(false);
     setTimeout(() => {
-      setActiveIndex(index); // Update testimonial
-      setFade(true); // Fade in
-    }, 300); // Sync with the fade-out duration
+      setActiveIndex(index);
+      setFade(true);
+    }, 300);
   };
 
   return (

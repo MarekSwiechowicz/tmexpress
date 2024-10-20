@@ -1,6 +1,5 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -11,6 +10,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "TMExpress",
   description: "TMExpress",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -20,11 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <title>TMExpress</title>
-        <meta name="description" content="TMExpress" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <head>
+        {/* Use the metadata object values */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={metadata.icons.icon} />
+      </head>
       <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );

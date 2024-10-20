@@ -25,7 +25,7 @@ const Footer = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setIsModalOpen(true); // Show modal on success
+          setIsModalOpen(true);
         },
         (error) => {
           console.log(error.text);
@@ -50,15 +50,15 @@ const Footer = () => {
               <form className="mt-4 flex" onSubmit={handleEmailSubmit}>
                 <input
                   type="email"
-                  className="bg-white text-black px-4 py-2 rounded-l outline-none"
+                  className="bg-white text-black px-4 py-2 outline-none"
                   placeholder="Wpisz e-mail..."
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} // Update the state with the email input
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-white text-black px-4 py-2 rounded-r"
+                  className="bg-white text-black px-4 py-2 "
                 >
                   →
                 </button>
@@ -109,7 +109,7 @@ const Footer = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg relative w-96 text-center">
+          <div className="bg-white p-8 shadow-lg relative w-96 text-center">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-black"
               onClick={() => setIsModalOpen(false)}
@@ -123,7 +123,7 @@ const Footer = () => {
               Nasz konsultant odpowie, jak najszybciej to możliwe.
             </p>
             <button
-              className="bg-black text-white px-4 py-2 rounded"
+              className="bg-black text-white px-4 py-2"
               onClick={() => setIsModalOpen(false)}
             >
               Wróć

@@ -19,7 +19,7 @@ export default function Onas() {
 
         <a
           href="#"
-          className="inline-block bg-white text-black py-2 px-4 font-semibold rounded-md shadow-md hover:bg-gray-100"
+          className="inline-block bg-white text-black py-2 px-4 font-semibold shadow-md hover:bg-gray-100"
         >
           Zamów wysyłkę →
         </a>

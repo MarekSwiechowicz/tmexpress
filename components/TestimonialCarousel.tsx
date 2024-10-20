@@ -70,7 +70,7 @@ export default function TestimonialCarousel() {
               className={`w-20 h-0.5 rounded cursor-pointer ${
                 index === activeIndex ? "bg-black" : "bg-gray-300"
               }`}
-              onClick={() => handleButtonClick(index)} // Switch to corresponding testimonial on click
+              onClick={() => handleButtonClick(index)}
             ></div>
           ))}
         </div>

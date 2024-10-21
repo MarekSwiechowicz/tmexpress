@@ -5,7 +5,35 @@ import React, { useState, useRef, useEffect } from "react";
 import Box from "../public/images/Box.png";
 import Shield from "../public/images/Shield.png";
 import temperature from "../public/images/temperature.png";
-import PlusButton from "./PlusButton";
+
+interface PlusButtonProps {
+  isOpen: boolean;
+  handleClick: () => void;
+}
+
+const PlusButton: React.FC<PlusButtonProps> = ({ isOpen, handleClick }) => {
+  return (
+    <button
+      id="buttonId"
+      className="flex flex-col justify-center items-center pt-64 lg:pt-36 pl-11"
+      onClick={handleClick}
+    >
+      <span
+        className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.25 w-10 rounded-sm absolute ${
+          isOpen ? "opacity-0" : "rotate-90"
+        }`}
+        style={{ transformOrigin: "center" }}
+      ></span>
+
+      {/* Horizontal line */}
+      <span
+        className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.25 w-10 rounded-sm ${
+          isOpen ? "opacity-100" : "opacity-100"
+        }`}
+      ></span>
+    </button>
+  );
+};
 
 export default function Uslugi() {
   const [openSections, setOpenSections] = useState({
@@ -60,7 +88,10 @@ export default function Uslugi() {
 
         {/* Section 1 */}
         <div className="flex">
-          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+          <div
+            className="flex flex-col lg:flex-row lg:flex-[8] cursor-pointer"
+            onClick={() => handleClick("section1")}
+          >
             <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-40">
               <Image src={Box} alt="Box" />
             </div>
@@ -93,9 +124,12 @@ export default function Uslugi() {
 
         {/* Section 2 */}
         <div className="flex">
-          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+          <div
+            className="flex flex-col lg:flex-row lg:flex-[8] cursor-pointer"
+            onClick={() => handleClick("section2")}
+          >
             <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-40">
-              <Image src={temperature} alt="Box" />
+              <Image src={temperature} alt="temperature" />
             </div>
             <div className="lg:pt-16 lg:pl-12 lg:pr-12 pb-8 text-4xl">
               Transport artykułów spożywczych w warunkach kontrolowanej
@@ -127,9 +161,12 @@ export default function Uslugi() {
 
         {/* Section 3 */}
         <div className="flex">
-          <div className="flex flex-col lg:flex-row lg:flex-[8]">
+          <div
+            className="flex flex-col lg:flex-row lg:flex-[8] cursor-pointer"
+            onClick={() => handleClick("section3")}
+          >
             <div className="pt-9 lg:pt-14 pb-9 lg:pb-14 w-20">
-              <Image src={Shield} alt="Box" />
+              <Image src={Shield} alt="Shield" />
             </div>
             <div className="lg:pt-16 lg:pl-12 lg:pr-12 pb-8 text-4xl">
               Transport towarów wrażliwych

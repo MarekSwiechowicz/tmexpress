@@ -23,12 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Use the metadata object values */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="icon" href={metadata.icons.icon} />
       </head>
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} antialiased`}>
+        <div className="max-w-[1366px] mx-auto px-4 sm:px-6 lg:px-8">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

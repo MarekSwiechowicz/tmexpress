@@ -41,17 +41,17 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5">
-        <div className="flex-[0.4]">
+        <div className="flex-[0.3]">
           <div className="py-4 w-24">
             <Image src={Logo} alt="logo" />
           </div>
         </div>
 
-        <div className="flex-[0.6] flex items-center justify-end lg:justify-between">
+        <div className="flex-[0.7] flex items-center justify-end lg:justify-between">
           {links.map((link, index) => (
             <CustomLink key={index} href={link.href} title={link.title} />
           ))}
-          <span className="text-lg font-normal pr-7 lg:pr-0">
+          <span className="text-lg font-normal pr-5 lg:pr-0">
             +48 530 995 026
           </span>
           <HamburgerButton isOpen={isOpen} handleClick={handleClick} />
@@ -61,7 +61,7 @@ export default function Navbar() {
       {/* Conditionally rendering the mobile menu */}
       <section
         id="mobile-menu"
-        className={`absolute top-24 lg-top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
+        className={`absolute top-24 right-1 lg-top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
           isOpen ? "block" : "hidden"
         }`}
       >

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 interface Testimonial {
   text: string;
@@ -22,11 +23,9 @@ export default function TestimonialCarousel() {
     },
   ];
 
-  // State for the currently active testimonial and fade state with types
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(true);
 
-  // Function to switch testimonials when a button is clicked with explicit typing
   const handleButtonClick = (index: number): void => {
     setFade(false);
     setTimeout(() => {
@@ -35,9 +34,29 @@ export default function TestimonialCarousel() {
     }, 300);
   };
 
+  const handleNext = () => {
+    handleButtonClick((activeIndex + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    handleButtonClick(
+      (activeIndex - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
+    preventScrollOnSwipe: true,
+    trackMouse: true,
+  });
+
   return (
-    <div className="flex justify-center items-center pt-16 pb-16 pl-11 md:pl-0">
-      <div className="relative max-w-xl min-h-[320px] flex flex-col justify-between text-center">
+    <div
+      {...handlers}
+      className="flex justify-center items-center pt-16 pb-16 pl-11 md:pl-0"
+    >
+      <div className="relative max-w-xl min-h-[360px] flex flex-col justify-between text-center">
         {/* Testimonial Block */}
         <div className="flex-1 flex items-center justify-center">
           <div className="relative">

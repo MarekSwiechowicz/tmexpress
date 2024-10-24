@@ -5,5 +5,5 @@ interface BaseComponentProps {
 }
 
 export default function BaseComponent({ children }: BaseComponentProps) {
-  return <div className="px-4 md:px-36 bg-white">{children}</div>;
+  return <div className="px-4 bg-white">{children}</div>;
 }

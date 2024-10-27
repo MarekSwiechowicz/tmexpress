@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" href={metadata.icons.icon} />
       </head>
       <body className={`${poppins.variable} antialiased`}>
-        <div className="">{children}</div>
+        <div className="max-w-[1440px] mx-auto">{children}</div>
       </body>
     </html>
   );

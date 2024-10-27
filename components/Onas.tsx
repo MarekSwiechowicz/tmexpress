@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Road from "../public/images/Road.png";
-import ArrowOrder from "../public/images/ArrowOrder.svg";
+import ArrowOrder from "../public/images/arrowOrder.svg";
 
 export default function Onas() {
   return (

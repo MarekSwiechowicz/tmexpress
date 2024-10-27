@@ -20,7 +20,7 @@ export default function Onas() {
           </p>
 
           <a
-            href="#"
+            href="#section4"
             className="inline-flex items-center bg-white text-black py-2 px-4 font-semibold hover:bg-gray-100"
           >
             Zamów wysyłkę

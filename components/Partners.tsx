@@ -8,8 +8,11 @@ import Image from "next/image";
 
 export default function Partners() {
   return (
-    <div id="section3" className="scroll-mt-24 lg:scroll-mt-32">
-      <div className="bg-white py-14 flex flex-col lg:flex-row lg:justify-between  items-center space-y-6 ">
+    <div
+      id="section3"
+      className="scroll-mt-24 lg:scroll-mt-32 md:px-12 lg:px-36"
+    >
+      <div className="bg-white py-14 flex flex-col md:flex-row md:justify-between items-center space-y-6 ">
         <Image src={Trendy} alt="parking"></Image>
         <Image src={Fresh} alt="parking"></Image>
         <Image src={Styroporstuck} alt="parking"></Image>

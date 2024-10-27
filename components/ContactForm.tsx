@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <div
       id="section4"
-      className="flex justify-center items-center pb-24 lg:pb-44 scroll-mt-24 lg:scroll-mt-32 px-4"
+      className="flex justify-center items-center pb-24 lg:pb-44 scroll-mt-24 lg:scroll-mt-32 px-4 xl:px-36"
     >
       <div className="w-full lg:p-12 px-4 py-16 lg:grid lg:grid-cols-2 lg:gap-8 bg-gray-200">
         <div className="flex flex-col">

@@ -146,7 +146,7 @@ export default function Uslugi() {
           ref={refs.section2}
           className="duration-500 overflow-hidden max-h-0"
         >
-          <div className="pb-16 lg:pl-36 lg:pr-48 lg:text-xl">
+          <div className="pb-16 lg:pl-32 lg:pr-48 lg:text-xl">
             Specjalizujemy się w transporcie artykułów spożywczych wymagających
             utrzymania stałej, kontrolowanej temperatury. Nasze chłodnie i
             izotermy są wyposażone w nowoczesne systemy monitorowania
@@ -182,7 +182,7 @@ export default function Uslugi() {
           ref={refs.section3}
           className="duration-500 overflow-hidden max-h-0"
         >
-          <div className="pb-16 lg:pl-36 lg:pr-48 lg:text-xl">
+          <div className="pb-16 lg:pl-32 lg:pr-48 lg:text-xl">
             Przewóz towarów wrażliwych, takich jak elektronika, farmaceutyki czy
             sprzęt medyczny, wymaga szczególnej ostrożności i precyzji. Nasza
             firma posiada doświadczenie oraz odpowiednie zasoby, aby zapewnić

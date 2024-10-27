@@ -2,9 +2,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import Box from "../public/images/Box.png";
-import Shield from "../public/images/Shield.png";
-import temperature from "../public/images/temperature.png";
+import Box from "../public/images/Box.svg";
+import Shield from "../public/images/shield.svg";
+import temperature from "../public/images/temp.svg";
 
 interface PlusButtonProps {
   isOpen: boolean;

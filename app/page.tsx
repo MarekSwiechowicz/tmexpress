@@ -15,22 +15,15 @@ export default function Home() {
   return (
     <>
       <main className="bg-white">
-        <WrapperComponent>
-          <Navbar></Navbar>
-          <Onas></Onas>
-          <Achievements></Achievements>
-        </WrapperComponent>
+        <Navbar></Navbar>
+        <Onas></Onas>
+        <Achievements></Achievements>
         <Truck></Truck>
         <Uslugi></Uslugi>
-        <WrapperComponent>
-          <TestimonialCarousel></TestimonialCarousel>
-        </WrapperComponent>
-
+        <TestimonialCarousel></TestimonialCarousel>
         <ParkingImage></ParkingImage>
-        <WrapperComponent>
-          <Partners></Partners>
-          <ContactForm></ContactForm>
-        </WrapperComponent>
+        <Partners></Partners>
+        <ContactForm></ContactForm>
         <Footer></Footer>
         <ScrollToTopButton></ScrollToTopButton>
       </main>

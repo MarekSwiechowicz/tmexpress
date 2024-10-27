@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <div
       id="section4"
-      className="flex justify-center items-center  pb-24 lg:pb-44"
+      className="flex justify-center items-center pb-24 lg:pb-44"
     >
       <div className="w-full lg:p-12 px-4 py-16 lg:grid lg:grid-cols-2 lg:gap-8 bg-gray-200">
         <div className="flex flex-col">
@@ -84,9 +84,16 @@ const ContactForm = () => {
                 }
                 className={`w-1/2 p-2 text-center ${
                   formData.companyType === "Firma"
-                    ? "bg-gray-300 text-black font-bold"
-                    : "bg-gray-200 text-gray-700"
+                    ? "font-bold"
+                    : "text-gray-700"
                 }`}
+                style={{
+                  fontSize: "18px",
+                  backgroundColor:
+                    formData.companyType === "Firma" ? "#D1CFCF" : "#F1F1F1",
+                  color:
+                    formData.companyType === "Firma" ? "#1A1A1A" : "#1A1A1A",
+                }}
               >
                 Firma
               </button>
@@ -97,9 +104,20 @@ const ContactForm = () => {
                 }
                 className={`w-1/2 p-2 text-center ${
                   formData.companyType === "Osoba prywatna"
-                    ? "bg-gray-300 text-black font-bold"
-                    : "bg-gray-200 text-gray-700"
+                    ? "font-bold"
+                    : "text-gray-700"
                 }`}
+                style={{
+                  fontSize: "18px",
+                  backgroundColor:
+                    formData.companyType === "Osoba prywatna"
+                      ? "#D1CFCF"
+                      : "#F1F1F1",
+                  color:
+                    formData.companyType === "Osoba prywatna"
+                      ? "#1A1A1A"
+                      : "#1A1A1A",
+                }}
               >
                 Osoba prywatna
               </button>
@@ -112,7 +130,11 @@ const ContactForm = () => {
               name="companyName"
               value={formData.companyName}
               onChange={handleChange}
-              placeholder="Nazwa firmy"
+              placeholder={
+                formData.companyType === "Firma"
+                  ? "Nazwa firmy"
+                  : "Imię i nazwisko"
+              } // Dynamic placeholder
               className="w-full p-2 border border-black bg-gray-200"
               required={formData.companyType === "Firma"} // Make the field required only if "Firma" is selected
             />
@@ -171,7 +193,7 @@ const ContactForm = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-          <div className="bg-white p-8  text-center">
+          <div className="bg-white p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">
               Twoja wiadomość została wysłana
             </h2>

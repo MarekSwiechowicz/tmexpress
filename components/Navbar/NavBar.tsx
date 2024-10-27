@@ -51,9 +51,12 @@ export default function Navbar() {
           {links.map((link, index) => (
             <CustomLink key={index} href={link.href} title={link.title} />
           ))}
-          <span className="text-lg font-normal pr-5 lg:pr-0">
+          <a
+            href="tel:+48530995026"
+            className="text-lg font-normal pr-7 lg:pr-0"
+          >
             +48 530 995 026
-          </span>
+          </a>
           <HamburgerButton isOpen={isOpen} handleClick={handleClick} />
         </div>
       </header>

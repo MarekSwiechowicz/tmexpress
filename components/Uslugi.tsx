@@ -79,7 +79,7 @@ export default function Uslugi() {
   return (
     <div
       id="section2"
-      className="flex flex-col xl:flex-row bg-customGray pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36 scroll-mt-24 lg:scroll-mt-32"
+      className="flex flex-col xl:flex-row bg-gray-200 pl-4 pr-4 lg:pl-36 pt-14 lg:pt-16 lg:pr-36 scroll-mt-24 lg:scroll-mt-32"
     >
       <div className="lg:flex-[0.25] text-5xl pb-8 font-bold">Usługi</div>
       <div className="lg:flex-[0.75]">

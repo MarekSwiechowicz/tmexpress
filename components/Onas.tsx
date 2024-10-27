@@ -3,7 +3,7 @@ import Road from "../public/images/Road.png";
 
 export default function Onas() {
   return (
-    <div className="lg:px-36">
+    <div className="lg:px-36 px-4 ">
       <div className="bg-[#FFED00] text-black text-left flex relative">
         {/* Text Content */}
         <div className="lg:flex-[0.45] pt-16 lg:pt-32 pb-16 lg:pb-32 pl-4 lg:pl-12">

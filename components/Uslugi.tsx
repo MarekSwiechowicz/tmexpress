@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
@@ -75,7 +74,7 @@ export default function Uslugi() {
     calculateHeight(refs.section1, openSections.section1);
     calculateHeight(refs.section2, openSections.section2);
     calculateHeight(refs.section3, openSections.section3);
-  }, [openSections]);
+  }, [openSections, refs.section1, refs.section2, refs.section3]);
 
   return (
     <div

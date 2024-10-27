@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import Logo from "../public/images/LogoWhite.png";
+import ArrowOrder from "../public/images/arrowOrder.svg";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -50,17 +51,14 @@ const Footer = () => {
               <form className="mt-4 flex" onSubmit={handleEmailSubmit}>
                 <input
                   type="email"
-                  className="bg-white text-black px-4 py-2 outline-none"
+                  className="bg-white text-black pl-4 py-2 "
                   placeholder="Wpisz e-mail..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <button
-                  type="submit"
-                  className="bg-white text-black px-4 py-2 "
-                >
-                  →
+                <button type="submit" className="bg-white text-black px-6 ">
+                  <Image src={ArrowOrder} alt="road" className="ml-12" />
                 </button>
               </form>
             </div>

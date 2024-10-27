@@ -9,7 +9,6 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Truck from "@/components/truck";
 import Uslugi from "@/components/Uslugi";
-import WrapperComponent from "@/components/WrapperComponent";
 
 export default function Home() {
   return (

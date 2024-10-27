@@ -5,7 +5,10 @@ import TruckSmall from "../public/images/CarSmall.png";
 
 export default function truck() {
   return (
-    <div id="section1" className="flex flex-col lg:flex-row-reverse">
+    <div
+      id="section1"
+      className="flex flex-col lg:flex-row-reverse scroll-mt-24 lg:scroll-mt-32"
+    >
       <div className="w-full lg:w-1/2">
         <Image
           src={Truck}

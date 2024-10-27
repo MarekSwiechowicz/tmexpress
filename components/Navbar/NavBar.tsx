@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5">
+      <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5 px-4 md:px-12 lg:px-36 sticky top-0 z-50 bg-white ">
         <div className="flex-[0.3]">
           <div className="py-4 w-24">
             <Image src={Logo} alt="logo" />
@@ -64,7 +64,7 @@ export default function Navbar() {
       {/* Conditionally rendering the mobile menu */}
       <section
         id="mobile-menu"
-        className={`absolute top-24 right-1 lg-top-28 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-50  ${
+        className={`fixed top-24 right-0 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-40 ${
           isOpen ? "block" : "hidden"
         }`}
       >
@@ -74,7 +74,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className="w-full text-center py-6 hover:opacity-90"
-              onClick={() => setIsOpen(false)} // Close the menu after clicking the link
+              onClick={() => setIsOpen(false)}
             >
               {link.title}
             </a>

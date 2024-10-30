@@ -51,11 +51,11 @@ export default function TestimonialCarousel() {
   return (
     <div
       {...handlers}
-      className="flex justify-center items-center pt-16 pb-16 pl-11 md:pl-0 pr-4"
+      className="flex items-center pt-16 pb-16 px-4 md:px-40 xl:px-80 text-center justify-center"
     >
-      <div className="relative max-w-xl min-h-[360px] flex flex-col justify-between text-center">
+      <div className="relative min-h-[360px] flex flex-col ">
         {/* Testimonial Block */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center pb-4">
           <div className="relative">
             {/* Testimonial Text with Fade Animation */}
             <div
@@ -63,7 +63,7 @@ export default function TestimonialCarousel() {
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-lg leading-relaxed text-gray-800 text-left">
+              <p className="text-3xl leading-relaxed text-left">
                 {testimonials[activeIndex].text}
               </p>
             </div>

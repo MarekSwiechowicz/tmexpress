@@ -89,9 +89,9 @@ const Footer = () => {
               <p>ul. Chalotta 6 lok. 3</p>
               <p>44-200 Rybnik</p>
               <p className="mt-4">
-                tel. 530 995 026 Tomasz Bój
+                tel. 530 995 026 Tomasz Bąk
                 <br />
-                tel. 693 409 630 Maciej Owczarek
+                tel. 693 409 630 Mikołaj Owczarek
               </p>
               <p className="mt-4">tmtransport@gmail.com</p>
             </div>

@@ -64,9 +64,9 @@ const ContactForm = () => {
               <p>44-200 Rybnik</p>
             </div>
             <div className="mb-4 text-lg pt-14">
-              <p>Tel: 604 956 029 Tomasz Bój</p>
-              <p>Tel: 693 498 460 Maciej Owczarek</p>
-              <p className="pt-4">Email: tmexpress.tomaszboj@gmail.com</p>
+              <p>Tel: 530 995 026 Tomasz Bąk</p>
+              <p>Tel: 693 409 630 Mikołaj Owczarek</p>
+              <p className="pt-4">Email: tmexpress.tomaszbak@gmail.com</p>
             </div>
           </div>
         </div>

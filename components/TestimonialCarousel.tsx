@@ -4,23 +4,20 @@ import { useSwipeable } from "react-swipeable";
 
 interface Testimonial {
   text: string;
-  author: string;
 }
 
 export default function TestimonialCarousel() {
   const testimonials: Testimonial[] = [
     {
-      text: "Bardzo jestem zadowolony z usług firmy transportowej TM Express. Zawsze dostarczają moje przesyłki na czas, a personel jest bardzo uprzejmy i pomocny. Ich flota pojazdów jest nowoczesna i utrzymana w doskonałym stanie, co gwarantuje bezpieczeństwo moich towarów podczas transportu.",
-      author: "- Maciej Powrot, CEO Biedronka",
+      text: "Od lat TM Express dowozi nasze produkty do klientów w całej Europie. Zawsze na czasi zawsze bezpiecznie. Gorąco polecam!",
     },
     {
-      text: "Dzięki TM Express moje przesyłki zawsze docierają na czas. Flota ich pojazdów to najlepsze, co spotkało moją firmę w zakresie transportu.",
-      author: "- Anna Kowalska, Logistics Manager",
+      text: "TM Express to nowoczesna firma, prężna i profesjonalna. Korzystam z ich usług od kilku lat i jeszcze nigdy nie zawiedli!",
     },
     {
-      text: "Firma TM Express to gwarancja jakości. Od lat korzystam z ich usług i nigdy się nie zawiodłem. Bardzo polecam.",
-      author: "- Jan Nowak, Owner of Nowak Co.",
+      text: "TM Express wyróżnia przede wszystkim szybkość, wspaniała jakość i kontakt przez 24h dobę! Zawsze wiesz, gdzie znajduje się twój ładunek. Polecam!",
     },
+    { text: "Nowoczesna flota, uprzejmy personel i dostawa zawsze na czas!" },
   ];
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -60,10 +57,6 @@ export default function TestimonialCarousel() {
         {/* Testimonial Block */}
         <div className="flex-1 flex items-center justify-center">
           <div className="relative">
-            {/* Quote Mark */}
-            <div className="absolute text-5xl font-bold text-black top-[-20px] left-[-30px]">
-              “
-            </div>
             {/* Testimonial Text with Fade Animation */}
             <div
               className={`transition-opacity duration-500 ${
@@ -72,10 +65,6 @@ export default function TestimonialCarousel() {
             >
               <p className="text-lg leading-relaxed text-gray-800 text-left">
                 {testimonials[activeIndex].text}
-              </p>
-              {/* Author */}
-              <p className="text-right mt-4 text-gray-600">
-                {testimonials[activeIndex].author}
               </p>
             </div>
           </div>

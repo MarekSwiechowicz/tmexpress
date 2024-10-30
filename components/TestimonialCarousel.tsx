@@ -75,7 +75,7 @@ export default function TestimonialCarousel() {
           {testimonials.map((_, index: number) => (
             <div
               key={index}
-              className={`w-20 h-0.5 rounded cursor-pointer ${
+              className={`w-14 h-0.5 rounded cursor-pointer ${
                 index === activeIndex ? "bg-black" : "bg-gray-300"
               }`}
               onClick={() => handleButtonClick(index)}

@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -21,7 +21,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     emailjs

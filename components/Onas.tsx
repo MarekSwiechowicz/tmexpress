@@ -21,7 +21,7 @@ export default function Onas() {
 
           <a
             href="#section4"
-            className="inline-flex items-center bg-white text-black py-2 px-4 font-semibold hover:bg-gray-100"
+            className="inline-flex items-center bg-white text-black py-2 px-4 font-medium hover:bg-gray-100"
           >
             Zamów wysyłkę
             <Image src={ArrowOrder} alt="road" className="ml-12" />

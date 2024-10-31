@@ -2,6 +2,8 @@
 "use client";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import Image from "next/image";
+import ArrowOrderWhite from "../public/images/ArrowOrderWhite.svg";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +56,9 @@ const ContactForm = () => {
     >
       <div className="w-full lg:p-12 px-4 py-16 lg:grid lg:grid-cols-2 lg:gap-8 bg-gray-200">
         <div className="flex flex-col">
-          <h2 className="text-5xl font-bold mb-4">Skontaktuj się z nami</h2>
+          <h2 className="text-5xl font-bold mb-4 xl:pr-40">
+            Skontaktuj się z nami
+          </h2>
           <div className="hidden lg:block">
             <div className="h-0.25 bg-black w-1/4"></div>
             <div className="mb-2 pt-4 text-lg">
@@ -73,8 +77,8 @@ const ContactForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4 pt-8">
           <div>
-            <label className="block text-sm font-medium mb-2">
-              Zaznacz odpowiednio
+            <label className="block text-lg font-medium mb-2">
+              ZAZNACZ ODPOWIEDNIO
             </label>
             <div className="border border-black p-1 flex">
               <button
@@ -82,12 +86,9 @@ const ContactForm = () => {
                 onClick={() =>
                   setFormData({ ...formData, companyType: "Firma" })
                 }
-                className={`w-1/2 p-2 text-center ${
-                  formData.companyType === "Firma"
-                    ? "text-gray-700"
-                    : "text-gray-700"
-                }`}
+                className="p-2 text-center"
                 style={{
+                  width: "45%",
                   fontSize: "18px",
                   backgroundColor:
                     formData.companyType === "Firma" ? "#D1CFCF" : "#F1F1F1",
@@ -102,12 +103,9 @@ const ContactForm = () => {
                 onClick={() =>
                   setFormData({ ...formData, companyType: "Osoba prywatna" })
                 }
-                className={`w-1/2 p-2 text-center ${
-                  formData.companyType === "Osoba prywatna"
-                    ? "text-gray-700"
-                    : "text-gray-700"
-                }`}
+                className="p-2 text-center"
                 style={{
+                  width: "55%",
                   fontSize: "18px",
                   backgroundColor:
                     formData.companyType === "Osoba prywatna"
@@ -169,22 +167,7 @@ const ContactForm = () => {
           <div className="flex justify-end">
             <button className="bg-black text-white font-medium px-4 py-2 flex items-center space-x-2">
               <span className="pr-36">Wyślij</span>
-              <span className="inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 12H3.75m13.5 0l-4.5-4.5m4.5 4.5l-4.5 4.5"
-                  />
-                </svg>
-              </span>
+              <Image src={ArrowOrderWhite} alt="arrow"></Image>
             </button>
           </div>
         </form>

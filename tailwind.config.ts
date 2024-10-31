@@ -19,26 +19,29 @@ const config: Config = {
         },
       },
       height: {
-        "0.25": "1px", // Custom height value for 1px
+        "0.25": "1px",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
       screens: {
-        xs: "480px", // Min width 480px
-        sm: "640px", // Min width 640px
-        md: "768px", // Min width 768px
-        lg: "1024px", // Min width 1024px
-        xl: "1280px", // Min width 1280px
-        xxl: "1880px", // Min width 1880px
+        xs: "480px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        xxl: "1880px",
       },
       colors: {
+        black: "#1D1D1B",
         dark: "#1b1b1b",
         light: "#f5f5f5",
         primary: "#B63E96",
         primaryDark: "#58E6D9",
+        customGray: "#484842",
+
         gray: {
-          200: "#EFEFEF", // Overridden gray-200 color
+          200: "#EFEFEF",
         },
       },
       animation: {

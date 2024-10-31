@@ -139,7 +139,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <span>Email:</span>
+            <span>E-MAIL</span>
             <input
               type="email"
               name="email"
@@ -152,7 +152,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <span>Napisz Wiadomość:</span>
+            <span>WIADOMOŚĆ</span>
             <textarea
               name="message"
               value={formData.message}

@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -21,20 +21,20 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .send(
-        "service_cxow07d", // Your EmailJS service ID
-        "template_eydy4r8", // Your EmailJS template ID
+        "service_cxow07d",
+        "template_eydy4r8",
         formData,
-        "pCsE7952Dep3pNzqh" // Your EmailJS user ID
+        "pCsE7952Dep3pNzqh"
       )
       .then(
         (result) => {
           console.log(result.text);
-          setShowModal(true); // Show the modal on success
+          setShowModal(true);
         },
         (error) => {
           console.log(error.text);
@@ -134,9 +134,9 @@ const ContactForm = () => {
                 formData.companyType === "Firma"
                   ? "Nazwa firmy"
                   : "Imię i nazwisko"
-              } // Dynamic placeholder
-              className="w-full p-2 border border-black bg-gray-200"
-              required={formData.companyType === "Firma"} // Make the field required only if "Firma" is selected
+              }
+              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none"
+              required={formData.companyType === "Firma"}
             />
           </div>
 
@@ -148,7 +148,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Adres e-mail"
-              className="w-full p-2 border border-black bg-gray-200"
+              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none"
               required
             />
           </div>
@@ -160,7 +160,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Napisz wiadomość..."
-              className="w-full p-2 border border-black bg-gray-200"
+              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none"
               rows={4}
               required
             />
@@ -190,7 +190,6 @@ const ContactForm = () => {
         </form>
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
           <div className="bg-white p-8 text-center">

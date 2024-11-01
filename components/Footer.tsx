@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <p>Aby otrzymać ofertę w formacie pdf podaj adres e-mail</p>
               <form
-                className="mt-4 flex w-64 h-14"
+                className="mt-4 flex w-72 h-12"
                 onSubmit={handleEmailSubmit}
               >
                 <button
@@ -58,13 +58,13 @@ const Footer = () => {
                 >
                   <input
                     type="email"
-                    className="bg-white text-black"
+                    className="bg-white text-black text-lg w-48"
                     placeholder="Wpisz e-mail..."
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
-                  <Image src={ArrowOrder} alt="road" className="" />
+                  <Image src={ArrowOrder} alt="arrow" className="" />
                 </button>
               </form>
             </div>

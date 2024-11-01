@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Image from "next/image";
 import ArrowOrderWhite from "../public/images/ArrowOrderWhite.svg";
+import X from "../public/images/X.svg";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -172,16 +173,23 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">
+          <div className="bg-white p-8 text-center w-96 h-96 relative">
+            <Image
+              src={X}
+              alt="X"
+              className="absolute top-4 right-4 cursor-pointer"
+              onClick={closeModal}
+            />
+            <h2 className="text-4xl font-bold mb-4 pt-10">
               Twoja wiadomość została wysłana
             </h2>
-            <p>Nasz konsultant odpowie, jak najszybciej to możliwe.</p>
+            <p className="text-lg text-customGray">
+              Nasz konsultant odpowie, jak najszybciej to możliwe.
+            </p>
             <button
-              className="mt-6 px-4 py-2 bg-black text-white"
+              className="mt-6 px-4 py-2 bg-white text-black w-28 h-16 border border-black"
               onClick={closeModal}
             >
               Wróć

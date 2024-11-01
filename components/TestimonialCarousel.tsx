@@ -9,7 +9,7 @@ interface Testimonial {
 export default function TestimonialCarousel() {
   const testimonials: Testimonial[] = [
     {
-      text: "Od lat TM Express dowozi nasze produkty do klientów w całej Europie. Zawsze na czasi zawsze bezpiecznie. Gorąco polecam!",
+      text: "Od lat TM Express dowozi nasze produkty do klientów w całej Europie. Zawsze na czas i zawsze bezpiecznie. Gorąco polecam!",
     },
     {
       text: "TM Express to nowoczesna firma, prężna i profesjonalna. Korzystam z ich usług od kilku lat i jeszcze nigdy nie zawiedli!",

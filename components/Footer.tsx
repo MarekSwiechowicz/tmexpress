@@ -48,10 +48,13 @@ const Footer = () => {
                 <Image src={Logo} alt="logo" />
               </div>
               <p>Aby otrzymać ofertę w formacie pdf podaj adres e-mail</p>
-              <form className="mt-4 flex" onSubmit={handleEmailSubmit}>
+              <form
+                className="mt-4 flex w-64 h-14"
+                onSubmit={handleEmailSubmit}
+              >
                 <button
                   type="submit"
-                  className="bg-white text-black flex items-center pl-4 pr-6 lg:pr-8 py-2"
+                  className="bg-white text-black flex items-center px-4"
                 >
                   <input
                     type="email"

@@ -30,7 +30,7 @@ export default function Onas() {
 
         {/* Image Content */}
         <div className="relative hidden md:flex md:flex-[0.55]">
-          <div className="absolute inset-0 pt-24" style={{ right: "-40px" }}>
+          <div className="absolute inset-0 pt-24" style={{ right: "-30px" }}>
             <Image src={Road} alt="road" className="" />
           </div>
         </div>

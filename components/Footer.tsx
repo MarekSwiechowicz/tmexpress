@@ -40,8 +40,8 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black text-white lg:pt-20 pt-14 pb-14">
-        <div className="px-4 lg:px-36 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="px-4 md:px-14 lg:px-44 xl:px-36 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
             {/* Left Section */}
             <div className="md:col-span-1">
               <div className="py-4 w-24">
@@ -68,11 +68,11 @@ const Footer = () => {
                 </button>
               </form>
             </div>
-            <div className="col-span-1"></div>
+            <div className="col-span-1 md:hidden xl:flex"></div>
 
             {/* Center Section */}
-            <div>
-              <ul className="space-y-2">
+            <div className="md:pl-10">
+              <ul className="space-y-1">
                 <li>
                   <a href="#about">O nas</a>
                 </li>
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
 
             {/* Right Section */}
-            <div className="text-gray-400">
+            <div className="text-customGray2">
               <h3 className="font-bold">TM Express</h3>
               <p>NIP 6423205008</p>
               <p>ul. Chalotta 6 lok. 3</p>

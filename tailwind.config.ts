@@ -39,6 +39,7 @@ const config: Config = {
         primary: "#B63E96",
         primaryDark: "#58E6D9",
         customGray: "#484842",
+        customGray2: "#8E8E8D",
 
         gray: {
           200: "#EFEFEF",

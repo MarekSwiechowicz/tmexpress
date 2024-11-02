@@ -1,31 +1,44 @@
 "use client";
+
 import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, RefObject } from "react";
 import Box from "../public/images/Box.svg";
 import Shield from "../public/images/shield.svg";
 import temperature from "../public/images/temp.svg";
 
+interface SectionRefs {
+  section1: RefObject<HTMLDivElement>;
+  section2: RefObject<HTMLDivElement>;
+  section3: RefObject<HTMLDivElement>;
+}
+
+interface OpenSections {
+  section1: boolean;
+  section2: boolean;
+  section3: boolean;
+}
+
 export default function Uslugi() {
-  const [openSections, setOpenSections] = useState({
+  const [openSections, setOpenSections] = useState<OpenSections>({
     section1: false,
     section2: false,
     section3: false,
   });
 
-  const refs = {
+  const refs: SectionRefs = {
     section1: useRef<HTMLDivElement>(null),
     section2: useRef<HTMLDivElement>(null),
     section3: useRef<HTMLDivElement>(null),
   };
 
-  const handleClick = (section) => {
+  const handleClick = (section: keyof OpenSections) => {
     setOpenSections((prevState) => ({
       ...prevState,
       [section]: !prevState[section],
     }));
   };
 
-  const calculateHeight = (ref, isOpen) => {
+  const calculateHeight = (ref: RefObject<HTMLDivElement>, isOpen: boolean) => {
     if (ref.current) {
       ref.current.style.maxHeight = isOpen
         ? `${ref.current.scrollHeight}px`

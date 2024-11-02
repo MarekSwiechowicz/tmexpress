@@ -5,19 +5,19 @@ import TruckSmall from "../public/images/CarSmall.png";
 
 export default function truck() {
   return (
-    <div className="flex flex-col lg:flex-row-reverse ">
+    <div className="flex flex-col md:flex-row-reverse ">
       <div className="w-full lg:w-1/2">
         <Image
           src={Truck}
           alt="Company truck delivering goods"
-          className="w-full h-auto lg:hidden xl:block"
+          className="w-full h-auto md:hidden xl:block"
         />
 
         {/* Image for screens between lg and xl */}
         <Image
           src={TruckSmall}
           alt="Different company truck delivering goods"
-          className="w-full h-auto hidden lg:block xl:hidden"
+          className="w-full h-auto hidden md:block xl:hidden"
         />
       </div>
       <div

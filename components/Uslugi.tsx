@@ -61,9 +61,9 @@ export default function Uslugi() {
               Transport materiałów przemysłowych bez kontroli temperatury
             </div>
           </div>
-          <div className="lg:flex-[1]">
+          <div className="">
             <button
-              className="flex flex-col justify-center items-center pt-64 lg:pt-36 pl-11"
+              className="flex flex-col justify-center items-center pt-56 lg:pt-36 pl-11"
               onClick={() => handleClick("section1")}
             >
               <span
@@ -111,7 +111,7 @@ export default function Uslugi() {
               temperatury
             </div>
           </div>
-          <div className="lg:flex-[1]">
+          <div className="">
             <button
               className="flex flex-col justify-center items-center pt-64 lg:pt-36 pl-11"
               onClick={() => handleClick("section2")}

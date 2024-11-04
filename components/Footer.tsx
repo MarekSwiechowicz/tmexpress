@@ -99,7 +99,7 @@ const Footer = () => {
                 <br />
                 tel. 693 409 630 Mikołaj Owczarek
               </p>
-              <p className="mt-4">tmtransport@gmail.com</p>
+              <p className="mt-4">tmexpress.tomaszbak@gmail.com</p>
             </div>
           </div>
 

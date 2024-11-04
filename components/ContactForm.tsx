@@ -140,7 +140,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <span>E-MAIL</span>
+            <span className="text-lg">E-MAIL</span>
             <input
               type="email"
               name="email"
@@ -153,7 +153,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <span>WIADOMOŚĆ</span>
+            <span className="text-lg">WIADOMOŚĆ</span>
             <textarea
               name="message"
               value={formData.message}
@@ -166,8 +166,8 @@ const ContactForm = () => {
           </div>
 
           <div className="flex justify-end">
-            <button className="bg-black text-white font-medium px-4 py-2 flex items-center space-x-2">
-              <span className="pr-36">Wyślij</span>
+            <button className="bg-black text-white font-medium px-4 py-2 flex items-center space-x-2 h-12">
+              <span className="pr-36 text-lg">Wyślij</span>
               <Image src={ArrowOrderWhite} alt="arrow"></Image>
             </button>
           </div>

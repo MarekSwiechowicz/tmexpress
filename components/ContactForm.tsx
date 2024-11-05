@@ -78,9 +78,7 @@ const ContactForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4 pt-8">
           <div>
-            <label className="block text-lg font-medium mb-2">
-              ZAZNACZ ODPOWIEDNIO
-            </label>
+            <div className=" text-lg font-medium mb-3">ZAZNACZ ODPOWIEDNIO</div>
             <div className="border border-black p-1 flex">
               <button
                 type="button"
@@ -134,26 +132,27 @@ const ContactForm = () => {
                   ? "Nazwa firmy"
                   : "Imię i nazwisko"
               }
-              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none"
+              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none mb-3"
               required={formData.companyType === "Firma"}
             />
           </div>
 
+          <div className="text-lg">E-MAIL</div>
+
           <div>
-            <span className="text-lg">E-MAIL</span>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Adres e-mail"
-              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none"
+              className="w-full p-2 border border-black bg-gray-200 rounded-none focus:outline-none mb-2"
               required
             />
           </div>
+          <div className="text-lg">WIADOMOŚĆ</div>
 
           <div>
-            <span className="text-lg">WIADOMOŚĆ</span>
             <textarea
               name="message"
               value={formData.message}

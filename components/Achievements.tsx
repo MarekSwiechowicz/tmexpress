@@ -14,11 +14,11 @@ const StatsSection = () => {
           </div>
 
           {/* 10 lat doświadczenia zawodowego */}
-          <div className="pl-4 border-l border-black sm:border-r xl:px-16">
+          <div className="pl-11 sm:pl-4 border-l border-black sm:border-r xl:px-16">
             <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold text-black">
               10 lat
             </h3>
-            <p className="text-lg">doświadczenia zawodowego</p>
+            <p className="text-lg ">doświadczenia zawodowego</p>
           </div>
 
           {/* 260 tys wysłanych ładunków */}
@@ -30,7 +30,7 @@ const StatsSection = () => {
           </div>
 
           {/* 150+ zadowolonych klientów */}
-          <div className="pl-4 border-l border-black xl:px-16">
+          <div className="pl-11 sm:pl-4 border-l border-black xl:px-16">
             <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold text-black">
               150+
             </h3>

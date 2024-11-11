@@ -21,7 +21,7 @@ export default function Onas() {
 
           <a
             href="#section4"
-            className="inline-flex items-center bg-white text-black py-2 px-4 font-semibold hover:bg-gray-100"
+            className="inline-flex items-center bg-white text-black py-2 px-4 font-medium hover:bg-gray-100 h-12 text-lg"
           >
             Zamów wysyłkę
             <Image src={ArrowOrder} alt="road" className="ml-12" />
@@ -30,7 +30,7 @@ export default function Onas() {
 
         {/* Image Content */}
         <div className="relative hidden md:flex md:flex-[0.55]">
-          <div className="absolute inset-0 pt-24" style={{ right: "-40px" }}>
+          <div className="absolute inset-0 pt-24" style={{ right: "-30px" }}>
             <Image src={Road} alt="road" className="" />
           </div>
         </div>

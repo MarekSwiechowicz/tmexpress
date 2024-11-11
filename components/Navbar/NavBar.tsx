@@ -16,11 +16,7 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
     <Link href={href} className={`${className} relative group hidden lg:flex`}>
       {title}
 
-      <span
-        className="h-[1px] inline-block w-0
-      absolute bg-black left-0 -bottom-0.5
-       group-hover:w-full transition-[width] ease duration-300 "
-      ></span>
+      <span className="h-[1px] inline-block w-0 absolute bg-black left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300"></span>
     </Link>
   );
 };
@@ -40,7 +36,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5 px-4 md:px-12 lg:px-36 sticky top-0 z-50 bg-white ">
+      <header className="w-full font-medium flex items-center justify-between pt-9 lg:pt-14 pb-5 px-4 md:px-12 lg:px-36 sticky top-0 z-50 bg-white">
         <div className="flex-[0.3]">
           <div className="py-4 w-24">
             <Image src={Logo} alt="logo" />
@@ -61,12 +57,13 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Conditionally rendering the mobile menu */}
+      {/* Conditionally rendering the mobile menu with a slide-down effect */}
       <section
         id="mobile-menu"
-        className={`fixed top-24 right-0 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-300 z-40 ${
-          isOpen ? "block" : "hidden"
+        className={`fixed top-24 right-0 bg-white w-full text-5xl flex flex-col justify-center transition-all duration-1000 z-40 overflow-hidden ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
+        style={{ transition: "max-height 0.3s ease-in-out, opacity 0.3s ease" }}
       >
         <nav className="flex flex-col items-center py-8">
           {links.map((link) => (

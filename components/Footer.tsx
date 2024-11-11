@@ -40,33 +40,39 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black text-white lg:pt-20 pt-14 pb-14">
-        <div className="px-4 lg:px-36 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="px-4 md:px-14 lg:px-44 xl:px-36 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
             {/* Left Section */}
             <div className="md:col-span-1">
               <div className="py-4 w-24">
                 <Image src={Logo} alt="logo" />
               </div>
               <p>Aby otrzymać ofertę w formacie pdf podaj adres e-mail</p>
-              <form className="mt-4 flex" onSubmit={handleEmailSubmit}>
-                <input
-                  type="email"
-                  className="bg-white text-black pl-4 py-2 "
-                  placeholder="Wpisz e-mail..."
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit" className="bg-white text-black px-6 ">
-                  <Image src={ArrowOrder} alt="road" className="ml-12" />
+              <form
+                className="mt-4 flex w-72 h-12"
+                onSubmit={handleEmailSubmit}
+              >
+                <button
+                  type="submit"
+                  className="bg-white text-black flex items-center px-4"
+                >
+                  <input
+                    type="email"
+                    className="bg-white text-black text-lg w-48"
+                    placeholder="Wpisz e-mail..."
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <Image src={ArrowOrder} alt="arrow" className="" />
                 </button>
               </form>
             </div>
-            <div className="col-span-1"></div>
+            <div className="col-span-1 md:hidden xl:flex"></div>
 
             {/* Center Section */}
-            <div>
-              <ul className="space-y-2">
+            <div className="md:pl-10">
+              <ul className="space-y-1">
                 <li>
                   <a href="#about">O nas</a>
                 </li>
@@ -83,17 +89,17 @@ const Footer = () => {
             </div>
 
             {/* Right Section */}
-            <div className="text-gray-400">
+            <div className="text-customGray2">
               <h3 className="font-bold">TM Express</h3>
               <p>NIP 6423209101</p>
               <p>ul. Chalotta 6 lok. 3</p>
               <p>44-200 Rybnik</p>
               <p className="mt-4">
-                tel. 530 995 026 Tomasz Bój
+                tel. 530 995 026 Tomasz Bąk
                 <br />
-                tel. 693 409 630 Maciej Owczarek
+                tel. 693 409 630 Mikołaj Owczarek
               </p>
-              <p className="mt-4">tmtransport@gmail.com</p>
+              <p className="mt-4">tmexpress.tomaszbak@gmail.com</p>
             </div>
           </div>
 

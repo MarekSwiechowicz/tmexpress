@@ -12,10 +12,18 @@ export default function Partners() {
       id="section3"
       className="scroll-mt-24 lg:scroll-mt-32 md:px-12 lg:px-36"
     >
-      <div className="bg-white py-14 flex flex-col md:flex-row md:justify-between items-center space-y-6 ">
-        <Image src={Trendy} alt="parking"></Image>
-        <Image src={Fresh} alt="parking"></Image>
-        <Image src={Styroporstuck} alt="parking"></Image>
+      <div className="bg-white py-14 flex flex-col md:flex-row justify-between items-center space-y-6 ">
+        <Image className="w-16 lg:w-28 " src={Trendy} alt="parking"></Image>
+        <Image
+          className="w-32 lg:w-56 items-center justify-center"
+          src={Fresh}
+          alt="parking"
+        ></Image>
+        <Image
+          className="w-28 lg:w-44"
+          src={Styroporstuck}
+          alt="parking"
+        ></Image>
         <Image src={Kacper} alt="parking"></Image>
         <Image src={dwadwa} alt="parking"></Image>
       </div>

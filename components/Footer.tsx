@@ -91,7 +91,7 @@ const Footer = () => {
             {/* Right Section */}
             <div className="text-customGray2">
               <h3 className="font-bold">TM Express</h3>
-              <p>NIP 6423205008</p>
+              <p>NIP 6423209101</p>
               <p>ul. Chalotta 6 lok. 3</p>
               <p>44-200 Rybnik</p>
               <p className="mt-4">

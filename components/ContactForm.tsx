@@ -65,7 +65,7 @@ const ContactForm = () => {
             <div className="mb-2 pt-4 text-lg">
               <p>TM Express</p>
               <p>NIP: 6423066058</p>
-              <p>ul. Chłodnicza 6 lok. 3</p>
+              <p>Chalotta 6/3</p>
               <p>44-200 Rybnik</p>
             </div>
             <div className="mb-4 text-lg pt-14">
